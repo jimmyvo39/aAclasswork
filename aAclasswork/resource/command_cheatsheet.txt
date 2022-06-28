@@ -1,0 +1,58 @@
+////////////////////////////////////////////////////////////////////////////////
+// Command Line Cheatsheet
+////////////////////////////////////////////////////////////////////////////////
+
+
+// =============================================================================
+// Actions                      Mac                  Windows
+// =============================================================================
+// list all folders             ls                    dir
+// clear terminal               cmd + k               cls
+// create a new folder          mkdir folder_name     mkdir folder_name
+// change directory             cd folder_name        cd folder_name
+// go back a directory          cd ..                 cd ..
+
+
+// run javascript file          node file_name.js     node file_name.js
+// get recent commands          ⬆️ up arrow key      ⬆️ up arrow key
+// autocomplete                 type out part of your file and if the rest is unique hit `tab` key
+//                              **note: autocomplete works well for files that contains NO SPACES!!
+//                              **as a general rule use -, _ or camelCase to name files that contains multiple words
+
+
+// access node                  node                  node
+// clear inside node            cmd + k               ctrl + l
+// exit node                    .exit                 .exit
+// exit node                    ctrl + c (2x)         ctrl + c (2x)
+
+
+// open atom via terminal       atom .                atom .
+// open vscode in terminal      code .                code .
+// to open specific file        code file_name.js     code file_name.js
+
+
+// =============================================================================
+// VS Code / Atom Code Editor
+// =============================================================================
+// new page                     cmd + n               ctrl + n
+// copy and cut                 cmd + x               ctrl + x
+// copy                         cmd + c               ctrl + c
+// paste                        cmd + v               ctrl + v
+// save                         cmd + s               ctrl + s
+// undo                         cmd + z               ctrl + z
+// redo                         cmd + y               ctrl + y
+
+
+// **note: VS Code / Atom does not auto save by default, please manually save it
+// to run the updated file again using `node file_name` command.
+
+
+// =============================================================================
+// Window Users
+// =============================================================================
+
+// How to navigate from C: to D: drive:
+// C:\Users\user>d:
+
+
+// Screen record: windows + alt + G
