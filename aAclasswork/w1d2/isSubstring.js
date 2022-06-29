@@ -16,8 +16,16 @@
 //     }
 //   }
 
+// function isSubstring(searchString, subString) {
+//     return ((searchString.toLowerCase()).indexOf(subString.toLowerCase()) > -1)
+// }
+
 function isSubstring(searchString, subString) {
-    return ((searchString.toLowerCase()).indexOf(subString.toLowerCase()) > -1)
+    if ((searchString.toLowerCase()).indexOf(subString.toLowerCase()) > -1) {
+        return true;
+    } else {
+        return false;
+    }
 }
   
 console.log(isSubstring("The cat went to the store", "he cat went")); // => true
