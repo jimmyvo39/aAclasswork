@@ -9,5 +9,5 @@ if (num % 3 === 0) {
 
 //divisible by 3
 //wont say divisible by 5 
-//because it completed the first conditional already 
+//because it completed the first conditional on the chain
 // if divisible by neither, nothing will print

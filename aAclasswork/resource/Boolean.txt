@@ -1,0 +1,17 @@
+true || true;                   // true
+true || false;                  // true
+false || true;                  // true
+false || false;                 // false
+
+
+// And (&&)
+true && true;                   // true
+true && false;                  // false
+false && true;                  // false   
+false && false;                 // false
+
+
+// Bang (!) - negate
+!true;                          // false
+!false;                         // true
+!!true;                         // true

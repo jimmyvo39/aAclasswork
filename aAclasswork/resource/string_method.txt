@@ -1,0 +1,13 @@
+// Other useful string methods -
+// Methods are built-in functions that belongs to a certain data type
+
+"hello".toUpperCase();          // "HELLO"
+"HI".toLowerCase();             // "hi"
+"hello".slice();                // "hello"
+"hello".slice(1);               // "ello"
+"hello".slice(1, 3);            // "el"
+
+// slice whenever you want to get substring from a given string
+// "hello world".slice(fromStartIndex, toEndIndex)
+// startIndex - inclusive
+// endIndex - exclusive
