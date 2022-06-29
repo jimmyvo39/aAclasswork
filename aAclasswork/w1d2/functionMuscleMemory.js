@@ -61,7 +61,7 @@ function sayHello(name) {
   console.log(sayHello("bootcamp prep"))//8
 
   function sayHello(name) {
-    var msg + "Hello," + name + ". How are you?";
+    var msg = "Hello," + name + ". How are you?";
     return msg;
   }
 
@@ -73,4 +73,3 @@ function sayHello(name) {
   }
 
   console.log(sayHello("bootcamp prep"))//10
-  
