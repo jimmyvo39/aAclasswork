@@ -17,7 +17,7 @@
 //   }
 
 function isSubstring(searchString, subString) {
-    return (searchString.indexOf(subString) > -1)
+    return ((searchString.toLowerCase()).indexOf(subString.toLowerCase()) > -1)
 }
   
 console.log(isSubstring("The cat went to the store", "he cat went")); // => true
