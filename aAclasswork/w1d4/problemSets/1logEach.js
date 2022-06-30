@@ -8,6 +8,8 @@
 // 1: John
 // 2: Carson
 
+//iterate each index followed by string followed by element at that index
+
 function logEach(arr){
     for (i = 0; i < arr.length; i+=1) {
         console.log(i + ": " + arr[i])
@@ -15,3 +17,4 @@ function logEach(arr){
 }
 
 logEach(["Anthony", "John", "Carson"])
+
