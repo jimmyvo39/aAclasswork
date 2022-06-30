@@ -10,15 +10,15 @@
 // isPrime(2017); // => true
 
 function isPrime(number) {
-    if (number < 2) {
+    if (number < 2) {                  // any number less than 2 is not a prime number
         return false
     }
-    for (i = 2; i < number ; i++) {
+    for (i = 2; i > number ; i++) {   // if any number between 2 and number-1 can divide evenly into the number then it is not a prime number
         if (number % i === 0) {
             return false
         }
     }
-    return true
+    return true                         // since no number divide into the number it is implied that the number is prime, additionally 2 failed both if statements
 } 
 
 
