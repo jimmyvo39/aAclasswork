@@ -6,7 +6,7 @@
 // maxValue([12, 6, 43, 2]); // => 43
 // maxValue([]); // => null
 // maxValue([-4, -10, 0.43]); // => 0.43
-// push array[0] in new array. compare every other array. if it is larger up date the new array  
+// push array[0] in new array. compare every other array. if it is larger update the new array  
 function maxValue(array) {
     let newArray = [null]
     newArray.push(array[0])
