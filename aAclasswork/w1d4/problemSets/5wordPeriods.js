@@ -6,10 +6,12 @@
 // wordPeriods('hello world'); // => 'hello. world.'
 // wordPeriods('what is the weather today'); // => 'what. is. the. weather. today.'
 
+//split sentence to new array
+// join new array with periods
+
 function wordPeriods(sentence) {
-    
-    sentence.split(" ").join(". ")
-    console.log(sentence)
+    let sentenceArray = sentence.split(" ")
+    return sentenceArray.join(". ") + '.'
 }
-sentence = 'hello world'
-wordPeriods(sentence)
+
+console.log(wordPeriods("what is the weather today"))
