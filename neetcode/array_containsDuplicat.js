@@ -44,5 +44,5 @@ function containDuplicate(arr) {
 let nums = [1,2,3,4,5,7,1,1]
 console.log(containDuplicate(nums))
 
-console.log(nums.length)
-console.log(newArray.length)
+// console.log(nums.length)
+// console.log(newArray.length)
