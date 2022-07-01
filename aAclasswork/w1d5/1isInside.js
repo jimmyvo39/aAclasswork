@@ -5,3 +5,10 @@
 //
 // isInside(['chase', 'phi', 'eliot'], 'eliot'); // => true
 // isInside(['chase', 'phi', 'eliot'], 'fred'); // => false
+
+function isInside(array, ele) {
+    return (array.indexOf(ele) > -1)
+}
+
+console.log(isInside(['chase', 'phi', 'eliot'], 'eliot'))
+console.log(isInside(['chase', 'phi', 'eliot']))
