@@ -7,9 +7,15 @@ Examples:
 mirrorArray([1,2,3]); // => [ 1, 2, 3, 3, 2, 1 ]
 mirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b', 'a' ]
 ***********************************************************************/
+//concat reverse array to original
 
 function mirrorArray(array) {
+    let reverseArray = []
 
+    for (i = 0; i < array.length; i += 1) {
+        reverseArray.unshift(array[i])
+    }
+    return array.concat(reverseArray)
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
