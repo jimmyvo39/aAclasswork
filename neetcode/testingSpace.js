@@ -17,18 +17,36 @@
 // }
 // printMulti(multi)  
 
-names = ["Wei", "Justin", "Jimmy", "Jonathan"]
+// names = ["Wei", "Justin", "Jimmy", "Jonathan"]
 
-function pairs(ppl) {
+// function pairs(ppl) {
   
-    let pair = []
+//     let pair = []
 
-    for (i = 0; i < ppl.length; i += 1) {
-        for (j = i + 1 ; j < ppl.length; j += 1) {
-            pair.push([ppl[i],ppl[j]])
+//     for (i = 0; i < ppl.length; i += 1) {
+//         for (j = i + 1 ; j < ppl.length; j += 1) {
+//             pair.push([ppl[i],ppl[j]])
             
+//         }
+//     }
+//     return pair
+// }
+// console.log(pairs(names))
+let num = [0, 2, 5, -2, 7, -7]
+
+function pairZeroSum (array) {
+    pair = []
+
+    for ( let i = 0; i < array.length; i += 1) {
+        for (let j = i + 1; j < array.length; j += 1) {
+            if (array[i] + array[j] === 0) {
+                pair.push([array[i],array[j]])
+            }
         }
     }
+
     return pair
+
 }
-console.log(pairs(names))
+
+console.log(pairZeroSum(num))
