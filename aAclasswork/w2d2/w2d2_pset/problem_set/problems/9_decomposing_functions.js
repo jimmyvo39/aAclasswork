@@ -19,7 +19,16 @@ isPrime(303212); // => false
 ***********************************************************************/
 
 function isPrime(number) {
+  if (number < 2) {
+    return false
+  }
 
+  for (let i = 2; i < number; i += 1) {
+    if ( number % i === 0) {
+      return false
+    } 
+  } return true
+  
 }
 
 /***********************************************************************
@@ -34,6 +43,15 @@ firstNPrimes(4); // => [2, 3, 5, 7]
 ***********************************************************************/
 
 function firstNPrimes(n) {
+  let primeSet = []
+
+  for (let i = 0; primeSet.length < n; i += 1) {
+    if (isPrime(i)) {
+      primeSet.push(i)
+    }
+  }
+
+  return primeSet
 
 }
 
@@ -49,7 +67,16 @@ sumOfNPrimes(4); // => 17
 ***********************************************************************/
 
 function sumOfNPrimes(n) {
+  let sum = 0
+  let primeSet = firstNPrimes(n)
 
+  for (let i = 0; i < primeSet.length; i += 1) {
+    let prime=primeSet[i]
+
+    sum = sum + primeSet[i]
+  }
+
+  return sum
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
