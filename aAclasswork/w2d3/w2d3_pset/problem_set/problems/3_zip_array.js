@@ -13,7 +13,13 @@ result; // => [ [ 'a', 10 ], [ 'b', 20 ], [ 'c', 30 ], [ 'd', 40 ] ]
 ***********************************************************************/
 
 function zipArray(arr1, arr2) {
+    zip = []
 
+    for (i = 0; i < arr1.length; i += 1) {
+        zip.push([arr1[i], arr2[i]])
+    }
+    
+    return zip
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
