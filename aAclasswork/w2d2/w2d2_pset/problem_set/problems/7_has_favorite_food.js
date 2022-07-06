@@ -21,9 +21,11 @@ var person = {
 hasFavoriteFood(person, 'burgers'); // => true
 hasFavoriteFood(person, 'fish'); // => false
 ***********************************************************************/
+// check objects.favorite food array for food string
+
 
 function hasFavoriteFood(obj, food) {
-
+  return (obj.favoriteFoods.indexOf(food) !== -1) 
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
