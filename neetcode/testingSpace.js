@@ -17,14 +17,14 @@
 // }
 // printMulti(multi)  
 
-names = ["Wei", "Justin", "Jimmy"]
+names = ["Wei", "Justin", "Jimmy", "Jonathan"]
 
 function pairs(ppl) {
   
     let pair = []
 
     for (i = 0; i < ppl.length; i += 1) {
-        for (j = 0; j < ppl.length; j += 1) {
+        for (j = i + 1 ; j < ppl.length; j += 1) {
             pair.push([ppl[i],ppl[j]])
             
         }
