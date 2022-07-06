@@ -32,15 +32,42 @@
 //     return pair
 // }
 // console.log(pairs(names))
-let num = [0, 2, 5, -2, 7, -7]
 
-function pairZeroSum (array) {
-    pair = []
+//------------------------------------------------------
 
-    for ( let i = 0; i < array.length; i += 1) {
-        for (let j = i + 1; j < array.length; j += 1) {
-            if (array[i] + array[j] === 0) {
-                pair.push([array[i],array[j]])
+// let num = [0, 2, 5, -2, 7, -7]
+
+// function pairZeroSum (array) {
+//     pair = []
+
+//     for ( let i = 0; i < array.length; i += 1) {
+//         for (let j = i + 1; j < array.length; j += 1) {
+//             if (array[i] + array[j] === 0) {
+//                 pair.push([array[i],array[j]])
+//             }
+//         }
+//     }
+
+//     return pair
+
+// }
+
+// console.log(pairZeroSum(num))
+
+//------------------------------------------------------
+let arr1 = divisibleByThreePairSum([1, 6, 3, 4, 2, 0]); //=> [[0, 4], [1, 2], [1, 5], [2, 5], [3, 4]]
+
+let arr2 = divisibleByThreePairSum([8, 3, 5, 9, 2]) //=> [[1, 3]]
+
+
+
+function divisibleByThreePairSum(array) {
+    let pair = []
+
+    for (let i = 0; i < array.length; i += 1) {
+        for ( let j = i + 1; j < array.length; j += 1) {
+            if ((array[i] + array[j]) % 3 === 0) {
+                pair.push([i,j])
             }
         }
     }
@@ -49,4 +76,4 @@ function pairZeroSum (array) {
 
 }
 
-console.log(pairZeroSum(num))
+console.log(arr1)

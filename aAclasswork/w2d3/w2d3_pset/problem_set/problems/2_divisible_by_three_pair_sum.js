@@ -11,9 +11,18 @@ arr1 //=> [[0, 4], [1, 2], [1, 5], [2, 5], [3, 4]]
 var arr2 = divisibleByThreePairSum([8, 3, 5, 9, 2]);
 arr2 //=> [[1, 3]]
 ***********************************************************************/
-
 function divisibleByThreePairSum(array) {
+    let pair = []
 
+    for (let i = 0; i < array.length; i += 1) {
+        for ( let j = i + 1; j < array.length; j += 1) {
+            if ((array[i] + array[j]) % 3 === 0) {
+                pair.push([i,j])
+            }
+        }
+    }
+
+    return pair
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
