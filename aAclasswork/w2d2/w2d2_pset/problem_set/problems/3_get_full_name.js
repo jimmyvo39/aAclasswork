@@ -10,10 +10,23 @@ getFullName(p1); // => 'John Doe'
 var p2 = {firstName: 'Charlie', lastName: 'Brown', age: 9};
 getFullName(p2); // => 'Charlie Brown'
 ***********************************************************************/
+var p1 = {
+    firstName: "John", 
+    lastName: "Doe"
+};
+
+var p2 = {
+    firstName: 'Charlie', 
+    lastName: 'Brown', 
+    age: 9
+};
 
 function getFullName(person) {
+    return(person.firstName + " " + person.lastName)
 
 }
+
+getFullName(p1)
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = getFullName;

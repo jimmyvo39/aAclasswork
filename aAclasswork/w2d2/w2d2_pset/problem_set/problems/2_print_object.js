@@ -17,8 +17,17 @@ printObject(bootcamp); // prints
 `population - 120`
 ***********************************************************************/
 
+var bootcamp = {
+    name: 'App Academy',
+    color: 'Red',
+    population: 120,
+   };
 
 function printObject(obj) {
+
+    for (var key in obj) {
+        console.log(key + " - " + obj[key])
+    }
 
 }
 

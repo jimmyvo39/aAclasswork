@@ -11,10 +11,27 @@ var object2 = {name: 'Two', location: 'SF'};
 valuePair(object1, object2, 'location'); // => [ 'NY', 'SF' ]
 valuePair(object1, object2, 'name'); // => [ 'One', 'Two' ]
 ***********************************************************************/
+var object1 = {
+    name: 'One', 
+    location: 'NY', 
+    age: 3
+};
+
+var object2 = {
+    name: 'Two', 
+    location: 'SF'
+};
 
 function valuePair(obj1, obj2, key) {
+    array = []
+    
+    array.push(obj1[key])
+    array.push(obj2[key])
 
+    return array
 }
+
+console.log(valuePair(object1, object2, "name"))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = valuePair;
