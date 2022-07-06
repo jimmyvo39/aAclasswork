@@ -28,10 +28,24 @@ var peeps = [
 ];
 countScores(peeps); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
-
+// loop through array of score objects
+// if name does not exist. create new object using name and count using score
+// if name does exist. add score to count
 
 function countScores(people) {
+  let scores = {}
+  
+  for (let i = 0; i < people.length; i += 1) {
+    let person = people[i]
 
+    if (scores[person.name] === undefined) {
+      scores[person.name] = person.score
+    } else {
+      scores[person.name] += person.score
+    }
+  }
+
+  return scores
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
