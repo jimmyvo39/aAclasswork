@@ -15,7 +15,24 @@ peakFinder([4, 6, 9, 4, 2, -7, 2, -4, 5]); //=> [2, 6, 8]
 ***********************************************************************/
 
 function peakFinder(array) {
+    let peak = []
 
+    if (array[0] > array[1]) {
+        peak.push(0)
+    }
+
+    for (let i = 1; i < array.length -2; i +=1) {
+        if (array[i] > array[i - 1] && array[i] > array[i + 1]) {
+            peak.push(i)
+        }
+
+    }
+
+    if (array[array.length -1] > array[array.length -2]) {
+        peak.push(array.length - 1)
+    }
+    
+    return peak
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
