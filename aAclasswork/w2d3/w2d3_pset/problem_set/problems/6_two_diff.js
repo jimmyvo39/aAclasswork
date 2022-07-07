@@ -15,7 +15,21 @@ HINT: Account for negative difference too!
 
 
 function twoDiff(array){
+    pair = []
 
+    for (i = 0; i < array.length; i += 1) {
+    let num1 = array[i]
+    
+        for (j = i + 1; j < array.length; j += 1) {
+            let num2 = array[j]
+
+            if (num1 - num2 === 2 || num1 - num2 === -2) {
+                pair.push([i,j])
+            }
+        }
+    }
+
+    return pair
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
