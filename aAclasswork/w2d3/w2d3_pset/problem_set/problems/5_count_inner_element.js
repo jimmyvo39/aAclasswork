@@ -25,7 +25,23 @@ how many times each element in each sub array repeats.
 
 
 function countInnerElement(arr) {
-  
+    obj = {}
+
+    for (i = 0; i < arr.length; i += 1) {
+        let subArr = arr[i]
+        
+        for(j = 0; j < arr[i].length; j += 1) {
+            let num = subArr[j]
+
+            if (obj[num] === undefined) {
+                obj[num] = 1
+            } else {
+                obj[num] += 1
+            }
+        }
+    }
+
+    return obj
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

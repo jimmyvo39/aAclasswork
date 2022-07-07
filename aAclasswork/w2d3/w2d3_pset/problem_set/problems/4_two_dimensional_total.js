@@ -19,7 +19,16 @@ twoDimensionalTotal(arr2); // => 15
 ***********************************************************************/
 
 function twoDimensionalTotal(array) {
+  let sum = 0
 
+  for (i = 0; i < array.length; i += 1) {
+    for (j = 0; j < array[i].length; j +=1) {
+      sum = sum + array[i][j]
+
+    }
+  }
+
+  return sum
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
