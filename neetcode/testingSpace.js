@@ -55,25 +55,31 @@
 // console.log(pairZeroSum(num))
 
 //------------------------------------------------------
-let arr1 = divisibleByThreePairSum([1, 6, 3, 4, 2, 0]); //=> [[0, 4], [1, 2], [1, 5], [2, 5], [3, 4]]
+// let arr1 = divisibleByThreePairSum([1, 6, 3, 4, 2, 0]); //=> [[0, 4], [1, 2], [1, 5], [2, 5], [3, 4]]
 
-let arr2 = divisibleByThreePairSum([8, 3, 5, 9, 2]) //=> [[1, 3]]
+// let arr2 = divisibleByThreePairSum([8, 3, 5, 9, 2]) //=> [[1, 3]]
 
 
 
-function divisibleByThreePairSum(array) {
-    let pair = []
+// function divisibleByThreePairSum(array) {
+//     let pair = []
 
-    for (let i = 0; i < array.length; i += 1) {
-        for ( let j = i + 1; j < array.length; j += 1) {
-            if ((array[i] + array[j]) % 3 === 0) {
-                pair.push([i,j])
-            }
-        }
-    }
+//     for (let i = 0; i < array.length; i += 1) {
+//         for ( let j = i + 1; j < array.length; j += 1) {
+//             if ((array[i] + array[j]) % 3 === 0) {
+//                 pair.push([i,j])
+//             }
+//         }
+//     }
 
-    return pair
+//     return pair
 
-}
+// }
 
-console.log(arr1)
+// console.log(arr1)
+
+// function foo() {
+// console.log('i am foo');
+
+var myNum = 42;
+myNum("hello");
