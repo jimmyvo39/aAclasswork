@@ -7,13 +7,15 @@
 function unique(array) {
   var uniqueArray = [];
 
-  for (var i = 0, i <= array.length, i += 1) {
+  for (i = 0; i < array.length; i += 1) {
     var ele = array[i];
 
     if (uniqueArray.indexOf(ele) === -1) {
       uniqueArray.push(ele);
     }
   }
+
+  return uniqueArray
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
