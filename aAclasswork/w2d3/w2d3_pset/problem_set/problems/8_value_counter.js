@@ -13,8 +13,17 @@ value in 'obj'.
 // pairs = {Anne: 'Roman', Alvin: 'Roman', JJ: 'Anne', Roman: 'Anne'}
 // valueCounter(pairs, 'Roman') // => 2
 ***********************************************************************/
+// loop through objects value
+function valueCounter(obj, val){ 
+    let count = 0
 
-function valueCounter(obj, val){
+    for (let key in obj) {
+        if (obj[key] === val) {
+            count += 1
+        }
+    }
+
+    return count
   
 }
 

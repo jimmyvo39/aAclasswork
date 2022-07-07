@@ -16,7 +16,15 @@ Note: Assume both arrays have unique elements.
 
 
 function arrayDiff(arr1, arr2){
-  
+    newArr = []
+
+        for (i = 0; i < arr1.length; i +=1){
+            if (!arr2.includes(arr1[i])) {
+                newArr.push(arr1[i])
+            }   
+        }
+    
+  return newArr
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
