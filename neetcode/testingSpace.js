@@ -1,85 +1,66 @@
-// console.log([0,1,2,"something"][3])
+//insert string return string without punctuation
+function removePunctuation(word) {
+    let punctuation = [";", "!", ".", "?", ",", "-"]
+    let lastChar = word.slice(-1)
 
-// let multi = [
-//     ["a", "b", "c"],
-//     ["d", "e", "f"],
-//     ["g", "h"]
-// ]
+        if (punctuation.indexOf(lastChar) === -1) {
+            return word
+        } else {
+            return word.slice(0, -1)
+        }
+}
 
-// function printMulti(arrays) {
-
-//     for (let i = 0; i < arrays.length; i +=1) {
-//         for (let j = 0; j < arrays[i].length; j += 1 ) {
-//             console.log(arrays[i][j])
-//         }
-//     }
-
-// }
-// printMulti(multi)  
-
-// names = ["Wei", "Justin", "Jimmy", "Jonathan"]
-
-// function pairs(ppl) {
+function hasPunctuation(word) {
+    let punctuation = [";", "!", ".", "?", ",", "-"]
+    let lastChar = word.slice(-1)
   
-//     let pair = []
+  return (punctuation.indexOf(lastChar) > -1)
+}
 
-//     for (i = 0; i < ppl.length; i += 1) {
-//         for (j = i + 1 ; j < ppl.length; j += 1) {
-//             pair.push([ppl[i],ppl[j]])
-            
-//         }
-//     }
-//     return pair
-// }
-// console.log(pairs(names))
+//insert string and array, test for stopword return boolean
+function isStopWord(word, stopWords) {
+    return (stopWords.indexOf(word) > -1)
+} 
 
-//------------------------------------------------------
+// if the word is a stopword with a punctuation push word lower case
+// if it is a stop word push it lower case
+// if the word is not a stop word, return first letter as uppercase]
 
-// let num = [0, 2, 5, -2, 7, -7]
+//insert string and array return string
+function titleize(title, stopWords) {
+    let newArray = []
+    let words = title.split(" ")
+    
+    for (i = 0; i < words.length; i++) {
+        let word = words[i]
+      
+        if (hasPunctuation(word)) {
+          let pWord = removePunctuation(word)
 
-// function pairZeroSum (array) {
-//     pair = []
+          if (isStopWord(pWord.toLowerCase(), stopWords)) {
+            newArray.push(word.toLowerCase())
+          } else {
+            newArray.push(word[0].toUpperCase() + word.slice(1).toLowerCase())
+          }
+        } 
+        else if (isStopWord(word, stopWords)) {
+          newArray.push(word.toLowerCase()) 
+        } else {
+          newArray.push(word[0].toUpperCase() + word.slice(1).toLowerCase())
+        }
+    }
 
-//     for ( let i = 0; i < array.length; i += 1) {
-//         for (let j = i + 1; j < array.length; j += 1) {
-//             if (array[i] + array[j] === 0) {
-//                 pair.push([array[i],array[j]])
-//             }
-//         }
-//     }
+    return newArray.join(" ")
+}
 
-//     return pair
+console.log(titleize("forest gump, the runner", ["the"]))
+// "Forest Gump, the Runner"
 
-// }
+console.log(titleize("MASTER AND COMMANDER", ["and"]))
+//"Master and Commander"
 
-// console.log(pairZeroSum(num))
+console.log(titleize("i LOVE; lover of mine", ["love", "of"]))
+//"I love; Lover of Mine"
 
-//------------------------------------------------------
-// let arr1 = divisibleByThreePairSum([1, 6, 3, 4, 2, 0]); //=> [[0, 4], [1, 2], [1, 5], [2, 5], [3, 4]]
-
-// let arr2 = divisibleByThreePairSum([8, 3, 5, 9, 2]) //=> [[1, 3]]
-
-
-
-// function divisibleByThreePairSum(array) {
-//     let pair = []
-
-//     for (let i = 0; i < array.length; i += 1) {
-//         for ( let j = i + 1; j < array.length; j += 1) {
-//             if ((array[i] + array[j]) % 3 === 0) {
-//                 pair.push([i,j])
-//             }
-//         }
-//     }
-
-//     return pair
-
-// }
-
-// console.log(arr1)
-
-// function foo() {
-// console.log('i am foo');
-
-var myNum = 42;
-myNum("hello");
+console.log(titleize("shall we dance?", ["dance"]))
+//"Shall We dance?"
