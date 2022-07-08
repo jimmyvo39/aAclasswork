@@ -10,6 +10,22 @@ nextTwoPrimes(8); // => [ 11, 13 ]
 nextTwoPrimes(20); // => [ 23, 29 ]
 nextTwoPrimes(97); // => [ 101, 103 ]
 ***********************************************************************/
+// start loop at num, condition based on array length = 2
+// use is prime helper
+
+function isPrime(number) {
+    if (number < 2) {
+        return false
+    }
+
+    for (i = 2; i < number; i++) {
+        if (i % number === 0) {
+            return false
+        }
+    }
+
+    return true
+}
 
 function nextTwoPrimes(num) {
 

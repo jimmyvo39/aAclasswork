@@ -7,7 +7,9 @@ function isPrime(number) {
         if (number % i === 0) {
             return false;
         }
-    } return true;
+    } 
+    
+    return true;
 }
 
 console.log(isPrime(2)); // => true
