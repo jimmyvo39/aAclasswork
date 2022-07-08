@@ -14,6 +14,17 @@ pairProduct([1, 2, 3, 12, 8], 24); //=> [ [ 1, 3 ], [ 2, 4 ] ]
 ***********************************************************************/
 
 function pairProduct(arr, num) {
+    newArr = []
+
+    for (i = 0; i < arr.length; i++) {
+        for (j = i + 1; j < arr.length; j++) {
+            if (arr[i] * arr[j] === num) {
+                newArr.push([i,j])
+            }
+        }
+    }
+
+    return newArr
 
 }
 
