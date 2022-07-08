@@ -11,9 +11,23 @@ valueReplace(['a', 'b', 'c', 'd'], {a: 1, b: 2, d: 4})
 valueReplace(['danny', 'kurstie', 'tommy'], {kurstie: 'operations', danny: 'placements'})
 => [ 'placements', 'operations', 'tommy' ]
 *******************************************************************************/
-
+//loop through array. check if ele is a key of object
+//if true push value of obj
+//if false push element
 function valueReplace(array, obj){
-  // your code here...
+  let newArray = []
+  
+  for (i = 0; i < array.length; i++) {
+    let ele = array[i]
+
+    if (obj[ele] !== undefined) {
+      newArray.push(obj[ele])
+    } else {
+      newArray.push(ele)
+    }
+  }
+
+  return newArray
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
