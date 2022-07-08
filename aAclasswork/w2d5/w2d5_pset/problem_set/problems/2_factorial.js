@@ -11,7 +11,13 @@ factorial(10); // => 3628800
 ***********************************************************************/
 
 function factorial(n) {
+    let product = n
 
+    for (i = n -1; i > 0; i--) {
+        product = product * i
+    }
+
+    return product
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
