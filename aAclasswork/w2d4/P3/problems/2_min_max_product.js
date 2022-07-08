@@ -10,7 +10,17 @@ minMaxProduct([0, 1, -5, 3, 6]) => -30
 *******************************************************************************/
 
 function minMaxProduct(array){
-  // your code here...
+  let obj = {min: 0, max: 0}
+  
+  for (i = 0; i <array.length; i++) {
+    let num = array[i]
+
+    if (num < obj.min) {
+      obj.min = num
+    }
+
+  }
+
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

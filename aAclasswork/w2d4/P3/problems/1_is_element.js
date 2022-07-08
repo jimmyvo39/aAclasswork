@@ -13,7 +13,7 @@ isElement(["a", "b", "c"], "d") => false
 *******************************************************************************/
 
 function isElement(array, ele){
-  // your code here...
+  return array.includes(ele)
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
