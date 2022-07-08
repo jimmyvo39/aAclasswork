@@ -13,22 +13,32 @@ nextTwoPrimes(97); // => [ 101, 103 ]
 // start loop at num, condition based on array length = 2
 // use is prime helper
 
+
+
 function isPrime(number) {
     if (number < 2) {
-        return false
+        return false;
     }
 
     for (i = 2; i < number; i++) {
-        if (i % number === 0) {
-            return false
+        if (number % i === 0) {
+            return false;
         }
-    }
-
-    return true
+    } 
+    
+    return true;
 }
 
 function nextTwoPrimes(num) {
+    let arr=[]
 
+    for (let i = num + 1; arr.length < 2; i++ ) {
+        if (isPrime(i)) {
+            arr.push(i)
+        }
+    }
+
+    return arr
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
