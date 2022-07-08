@@ -8,8 +8,28 @@ multiples(10, 2) => [ 2, 4, 6, 8 ]
 multiples(15, 3) => [ 3, 6, 9, 12 ]
 *******************************************************************************/
 
+// function multiples(max, num){
+//   let arr = []
+
+//   for (i = 1; i < max; i++) {
+//     if (i % 2 === 0 && i % num === 0) {
+//       arr.push(i)
+//     }
+//   }
+
+//   return arr
+// }
+
 function multiples(max, num){
-  // your code here...
+  let arr = []
+
+  for (i = 1; i < max; i++) {
+    if ((i % 2 === 0 && i % num === 0)||( i % num === 0)) {
+      arr.push(i)
+    }
+  }
+
+  return arr
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
