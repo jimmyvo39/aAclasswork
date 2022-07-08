@@ -12,9 +12,20 @@ phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'hello world') => true
 phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'hello prep') => true
 phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'hello goodbye') => false
 *******************************************************************************/
+//turn string into array
+//loop through phrase array and check again words array
+
 
 function phraseFinder(words, phrase){
-  // your code here...
+  for (i = 0; i < words.length; i++) {
+    for (j = 0; j < words.length; j++) {
+      if (words[i] + " " + words[j] === phrase) {
+        return true
+      }
+    }
+  }
+
+  return false
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
