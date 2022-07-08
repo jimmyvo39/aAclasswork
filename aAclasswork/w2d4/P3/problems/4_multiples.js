@@ -24,7 +24,7 @@ function multiples(max, num){
   let arr = []
 
   for (i = 1; i < max; i++) {
-    if ((i % 2 === 0 && i % num === 0)||( i % num === 0)) {
+    if (( i % num === 0)) {
       arr.push(i)
     }
   }

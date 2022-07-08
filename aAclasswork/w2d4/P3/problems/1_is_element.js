@@ -13,7 +13,15 @@ isElement(["a", "b", "c"], "d") => false
 *******************************************************************************/
 
 function isElement(array, ele){
-  return array.includes(ele)
+  for (i = 0; i < array.length; i++) {
+    let currentEle = array[i]
+
+    if (currentEle === ele) {
+      return true
+    }
+  }
+  
+  return false
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
