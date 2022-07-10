@@ -10,7 +10,11 @@ greatestCommonFactor(7, 11) => 1
 *******************************************************************************/
 
 function greatestCommonFactor(num1, num2) {
-  // your code here...
+  for (i = num1; i > 0; i--) {
+    if (num1 % i === 0 && num2 % i === 0) {
+      return i
+    }
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
