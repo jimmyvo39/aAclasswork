@@ -11,7 +11,21 @@ hipsterfyWord('BACKWARDS') => 'BACKWRDS'
 *******************************************************************************/
 
 function hipsterfyWord(word) {
-  // your code here...
+  let vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+  let chars = word.split("")
+  newWord = []
+
+  for (i = chars.length -1; i >= 0 ; i--) { // going through words backwards
+    if (vowels.indexOf(chars[i]) > -1) {
+      break
+    } 
+      newWord.unshift(chars[i])
+  }
+  for (j = i - 1; j >= 0 ; j--) { // going through words backwards starting from the first vowel break
+     newWord.unshift(chars[j])
+  }
+
+  return newWord.join("")
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
