@@ -13,7 +13,17 @@ valueConcat(['a', 'b', 'c'], {b: 2, c: 3})
 *******************************************************************************/
 
 function valueConcat(array, obj) {
-  // your code here...
+  let newArray = []
+
+  for ( i = 0; i < array.length; i++) {
+    if (obj[array[i]] !== undefined) {
+      newArray.push(array[i] + obj[array[i]])
+    } else {
+      newArray.push(array[i])
+    }
+  }
+
+  return newArray
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
