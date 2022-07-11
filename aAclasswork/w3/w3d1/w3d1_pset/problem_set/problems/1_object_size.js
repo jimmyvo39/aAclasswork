@@ -21,7 +21,15 @@ objectSize(obj2); // => 3
 ***********************************************************************/
 
 function objectSize(obj) {
+  let count = 0
 
+  for (let key in obj) {
+    if (obj[key] !== undefined) {
+      count++
+    }
+  }
+
+  return count
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
