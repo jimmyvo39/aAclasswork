@@ -14,7 +14,15 @@ threeIncreasing([7, 2, 4, 5, 2, 1, 6]); // => false
 ***********************************************************************/
 
 function threeIncreasing(arr) {
+    for (i = 0; i < arr.length; i++) {
+        let num = arr[i]
 
+        if ((num - arr[i - 1] === 1) && (arr[i + 1] - num === 1)) {
+            return true
+        }
+    }
+
+    return false
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
