@@ -24,9 +24,24 @@ single paramter, but your `mySelect` function should still try to pass 3
 parameters to the callback. This allows us to create a versatile
 `mySelect` function that works with various callbacks.
 ***********************************************************************/
+function isEven(num) {
+  return num % 2 === 0;
+}
+
+function isNegative(num) {
+  return num < 0;
+}
 
 function mySelect(arr, cb) {
+  let newArray =[]
 
+  for (i = 0; i < arr.length; i++) {
+    if (cb(arr[i])) {
+      newArray.push(arr[i])
+    }
+  }
+  
+ return newArray
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
