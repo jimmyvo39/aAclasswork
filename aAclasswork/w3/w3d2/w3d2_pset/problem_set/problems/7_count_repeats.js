@@ -14,8 +14,35 @@ countRepeats('mississippi'); //=> 3
 countRepeats('hellobootcampprep'); //=> 4
 ***********************************************************************/
 
-function countRepeats(string) {
+//split into array
+//scan array and create object keys
 
+//scan object for keys with values over 1, add to count
+// return the count
+
+
+
+function countRepeats(string) {
+    let count = 0
+    let obj = {}
+
+    for (i = 0; i < string.length; i++) {
+        let char = string[i] 
+
+        if (obj[char] === undefined) {
+          obj[char] = 1
+          } else {
+          obj[char] += 1
+          }
+    }
+
+    for (let key in obj) {
+        if (obj[key] > 1) {
+            count += 1
+        }
+    }
+    
+    return count
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

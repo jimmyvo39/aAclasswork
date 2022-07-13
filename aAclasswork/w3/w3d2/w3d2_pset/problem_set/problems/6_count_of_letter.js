@@ -11,7 +11,16 @@ countOfLetter('BOOTCAMP', 't'); // => 1
 ***********************************************************************/
 
 function countOfLetter(string, char) {
+    let chars = string.split("")
+    let count = 0
 
+    for (i = 0; i < string.length; i++) {
+        if (chars[i].toLowerCase() === char) {
+            count ++
+        }
+    }
+
+    return count
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

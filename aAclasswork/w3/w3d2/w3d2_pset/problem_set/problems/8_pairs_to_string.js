@@ -21,9 +21,17 @@ var array2 = [
 
 pairsToString(array2); // => 'food!'
 ***********************************************************************/
-
+//loop through each array
 function pairsToString(arr) {
+  let string = []
 
+  for ( let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i][1]; j++) {
+      string.push(arr[i][0])
+    }
+  }
+
+  return string.join("")
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
