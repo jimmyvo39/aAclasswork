@@ -44,5 +44,18 @@ function mySelect(arr, cb) {
  return newArray
 }
 
+// Aa solution
+// function mySelect(arr, cb) {
+//   var selected = [];
+
+//   for (var i = 0; i < arr.length; i += 1) {
+//     if (cb(arr[i], i, arr)) {
+//       selected.push(arr[i]);
+//     }
+//   }
+
+//   return selected;
+// }
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = mySelect;

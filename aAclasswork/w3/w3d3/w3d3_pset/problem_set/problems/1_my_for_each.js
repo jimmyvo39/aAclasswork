@@ -40,11 +40,20 @@ function myForEach(array, cb) {
   for (let i = 0; i < array.length; i++) {
     let ele = array[i]
     let arr = array
-    
+
     cb(ele, i, arr)
   }
 
 }
 
+
+// Aa solution
+// function myForEach(array, cb) {
+//   for (var idx = 0; idx < array.length; idx += 1) {
+//     var el = array[idx];
+
+//     cb(el, idx, array);
+//   }
+// }
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = myForEach;

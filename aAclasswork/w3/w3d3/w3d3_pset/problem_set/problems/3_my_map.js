@@ -18,8 +18,26 @@ myMap([9, 25, 100, 36, 81], Math.sqrt); // => [ 3, 5, 10, 6, 9 ]
 ***********************************************************************/
 
 function myMap(arr, cb) {
+let newArray = []
 
+for (i = 0; i < arr.length; i++) {
+  newArray.push(cb(arr[i]))
 }
+
+return newArray
+}
+
+// Aa solution
+
+// function myMap(arr, cb) {
+//   var mapped = [];
+
+//   for (var i = 0; i < arr.length; i += 1) {
+//     mapped.push(cb(arr[i], i, arr));
+//   }
+
+//   return mapped;
+// }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = myMap;
