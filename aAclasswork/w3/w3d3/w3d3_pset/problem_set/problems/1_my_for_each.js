@@ -31,8 +31,18 @@ expects a single parameter. If we try to pass more than one parameter to
 the function, it will ignore the extras. `printHalf(10, 'what?', false)`
 will print 5.
 ***********************************************************************/
+function printInfo(ele, i, arr) {
+  console.log(ele, "is at position", i, "in array", arr);
+}
 
-function myForEach(array, cb) {
+function myForEach(array, cb) { 
+  
+  for (let i = 0; i < array.length; i++) {
+    let ele = array[i]
+    let arr = array
+    
+    cb(ele, i, arr)
+  }
 
 }
 
