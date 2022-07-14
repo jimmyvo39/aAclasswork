@@ -16,7 +16,13 @@ mySome([2, 4, 6, 8], isNegative); // => false
 ***********************************************************************/
 
 function mySome(arr, cb) {
+  for (i = 0; i < arr.length; i++) {
+    if (cb(arr[i])) {
+      return true
+    }
+  }
 
+  return false
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
