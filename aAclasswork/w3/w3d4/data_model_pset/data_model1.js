@@ -14,10 +14,12 @@ var students1 = [
 // Pawandeep
 
 function printNames(students) {
-    //your code here...
+    for (let i = 0; i < students.length; i++) {
+      console.log(students[i].name)
+    }
 }
 
-// printNames(students1); // uncomment when ready to test
+ //printNames(students1); // uncomment when ready to test
 
 // ~~~~~~ 2
 var students2 = [
@@ -44,10 +46,12 @@ var students2 = [
 // Pawandeep is student #2
 
 function printStudents(students) {
-  //your code here...
+  for (i = 0; i < students.length; i++) {
+    console.log(students[i].name + " is student #" + students[i].id)
+  }
 }
 
-// printStudents(students2); // uncomment when ready to test
+//printStudents(students2); // uncomment when ready to test
 
 //~~~~~3
 var students3 = [
@@ -76,11 +80,26 @@ var students3 = [
 // Winnie 100
 // Pawandeep 92
 
-function printBestGrade(students) {
-  //your code here...
+function highScore (arrayOfObj) {
+  let highest = arrayOfObj[0].score
+
+  for (let i = 1; i < arrayOfObj.length; i++) {
+    if (highest < arrayOfObj[i].score) {
+      highest = arrayOfObj[i].score
+    }
+  }
+
+  return highest
 }
 
-// printBestGrade(students3); // uncomment when ready to test
+function printBestGrade(students) {
+  for (let i = 0; i < students.length; i++) {
+    let student = students[i]
+    console.log(student.name, highScore(student.grades))
+  }
+}
+
+ //printBestGrade(students3); // uncomment when ready to test
 
 
 // Write a function that will print the name of the student and their average test score
@@ -92,8 +111,21 @@ function printBestGrade(students) {
 // Winnie 72.66666666666667
 // Pawandeep 73.33333333333333
 
-function printAverageGrade(students) {
-  //your code here...
+function avgScore(arrayOfObj) {
+  let sumOfscores = 0
+
+  for (let i = 0; i < arrayOfObj.length; i++) {
+    sumOfscores += arrayOfObj[i].score
+  }
+
+  return sumOfscores/arrayOfObj.length
 }
 
-// printAverageGrade(students3); // uncomment when ready to test
+function printAverageGrade(students) {
+  for (let i = 0; i < students.length; i++) {
+    let student = students[i]
+    console.log(student.name, avgScore(student.grades))
+  }
+}
+
+printAverageGrade(students3); // uncomment when ready to test
