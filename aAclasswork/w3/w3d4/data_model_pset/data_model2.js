@@ -13,7 +13,11 @@ parsed by specified functions.
 // 1: UserName2
 // ...and so forth, for all the users
 
-// var users1 = your code here;
+let users1 = [
+  {id: 0, username: "username1"},
+  {id: 1, username: "username2"},
+  {id: 2, username: "username3"}
+]
 
 function printUsers(users) {
   for (var i = 0; i < users.length; i++) {
@@ -22,7 +26,7 @@ function printUsers(users) {
   }
 }
 
-// printUsers(users1); // uncomment when ready to test
+ //printUsers(users1); // uncomment when ready to test
 
 
 //~~~~~~2
@@ -40,7 +44,17 @@ function printUsers(users) {
 //   -siteName5
 // ...and so forth, for all the users
 
-// var users2 = your code here;
+//array include  objects
+//inside objects there are 2 key/value
+//first key's value is one string
+//second key's value is an array of objects
+// each element have the key of url
+//each value of url is a unique string of sitenames
+
+let users2 = [
+  {username: "UserName1", sites: [{url: "siteName1"},{url: "siteName2"}]},
+  {username: "UserName2", sites: [{url: "siteName3"},{url: "siteName4"},{url: "siteName5"}]}
+]
 
 function printUsersWebsites (users) {
   for (var i = 0; i < users.length; i++) {
@@ -54,7 +68,7 @@ function printUsersWebsites (users) {
   }
 }
 
-// printUsersWebsites(users2); // uncomment when ready to test
+ //printUsersWebsites(users2); // uncomment when ready to test
 
 
 //~~~~~~3
@@ -87,8 +101,14 @@ function printUsersWebsites (users) {
 //     -popularity score: 32
 // ...and so forth, for all the users
 
-// var users3 = your code here;
-
+ var users3 = [
+  {username: "UserName1",sites: [{url: "siteName1.com",load: "21",userCount: "210000", pop: "32"},
+                                {url: "siteName2.com",load: "21",userCount: "210000", pop: "32"}]}
+ ,
+  {username: "UserName2",sites: [{url: "siteName3.com",load: "21",userCount: "210000", pop: "32"},
+                                {url: "siteName4.com",load: "21",userCount: "210000", pop: "32"},
+                                {url: "siteName5.com",load: "21",userCount: "210000", pop: "32"}]}
+]
 function printUsersWebsitesInfo (users) {
   for (var i = 0; i < users.length; i++) {
     var user = users[i];
@@ -103,5 +123,4 @@ function printUsersWebsitesInfo (users) {
     }
   }
 }
-
-// printUsersWebsitesInfo(users3); // uncomment when ready to test
+ printUsersWebsitesInfo(users3); // uncomment when ready to test
