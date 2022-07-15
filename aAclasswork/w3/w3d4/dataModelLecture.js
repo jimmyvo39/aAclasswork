@@ -124,15 +124,15 @@ const students3 = [
   // Pikachu 92
   
   // write a helper function to get the highest score for 1 student
-function highScore(scores) {
-    for
+// function highScore(scores) {
+//     for
 
-}
+// }
 
 
-  function printBestScore(student) {
-    for (i = 0; i < student.length; i++) {
-        console.log(student[i].name, highScore(student[i].grades))
-    }
+//   function printBestScore(student) {
+//     for (i = 0; i < student.length; i++) {
+//         console.log(student[i].name, highScore(student[i].grades))
+//     }
 
-  }
+//   }
