@@ -12,8 +12,36 @@ favoriteWord('s', 'sinful caesar sipped his snifter') //=> 'sinful'
 favoriteWord('x', 'sinful caesar sipped his snifter') //=> ''
 ***********************************************************************/
 
-function favoriteWord(favoriteLetter, sentence) {
+// turn each word into an key. value is count of target
+// if key doesnt exist create key =
+// loop through object, scan for favorite letter  
 
+function countLetter (favoriteLetter, word) {
+    let chars = word.split("")
+    let char = chars[i]
+    let count = 0
+
+    for (let i = 0; i < chars.length; i++) {
+        if(char === favoriteLetter) {
+            count++
+        }
+    }
+
+    return count
+}
+
+function favoriteWord(favoriteLetter, sentence) {
+    let words = sentence.split(" ")
+    let fav = ""
+    
+    for (i = 0; i < words.length; i++) {
+        let word = words[i]
+        if(countLetter(favoriteLetter, fav) < countLetter(favoriteLetter, word)) {
+            fav = word
+        }
+    }
+
+    return fav
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
