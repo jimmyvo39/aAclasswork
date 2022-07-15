@@ -29,6 +29,8 @@ function oddWordsOut(sentence) {
 
     return newArray.join(" ")
 }
+// O(n) 
+//linear function
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = oddWordsOut;
