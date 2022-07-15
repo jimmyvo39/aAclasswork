@@ -11,9 +11,29 @@ commonPrimeFactors(6, 24); // => [ 2, 3 ]
 commonPrimeFactors(11,22); // => [ 11 ]
 commonPrimeFactors(45, 60); // => [ 3, 5 ]
 ***********************************************************************/
+function isPrime(num) {
+    if (num < 2) {
+        return false
+    }
+
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+            return false
+        }
+    }
+
+    return true
+}
 
 function commonPrimeFactors(num1, num2) {
+    let arr = []
 
+    for (let i = 2; i < num1 + num2; i++) {
+        if(num1 % i === 0 && num2 % i === 0 && isPrime(i)) {
+            arr.push(i)
+        }
+    }
+    return arr
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
