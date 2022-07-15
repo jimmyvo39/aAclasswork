@@ -20,7 +20,25 @@ mindPsAndQs('PPPXQPPPQ'); // => 5
 
 
 function mindPsAndQs(str) {
+    let streak = 0
+    let current = 0
+    let strArr =str.split("")
 
+    for (let i = 0; i < strArr.length; i++) {
+        let char = strArr[i]
+
+        if(char === "P" || char === "Q") {
+            current++
+            
+            if( current > streak) {
+                streak = current
+            }
+        } else {
+         current = 0
+        }
+    }
+
+    return streak
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
