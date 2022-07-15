@@ -16,7 +16,7 @@ splitHalfArray(['a', 'b', 'c', 'd', 'e', 'f']);
 function splitHalfArray(array) {
     let newArr = []
     let left = array.slice(0,Math.floor(array.length/2))
-    let right = array.slice(Math.floor(array.length/2))
+    let right = array.slice(Math.ceil(array.length/2))
 
     return [left,right]
 
