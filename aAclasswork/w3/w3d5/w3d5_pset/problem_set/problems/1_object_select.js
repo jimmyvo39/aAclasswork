@@ -25,7 +25,16 @@ matchingPairs; //=> {
 ***********************************************************************/
 
 function objectSelect(obj, callback) {
+  let newObj = {}
 
+  for (let key in obj) {
+    if (callback(key,obj[key])) {
+      newObj[key] = obj[key]
+
+    }
+  }
+
+  return newObj
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
