@@ -25,8 +25,20 @@ var assessments2 = [
 isPassing(assessments2) => false
 *******************************************************************************/
 
+//loop through array. sum the score. return scores sum divided by array length
+//return boolean
+
+function avg(num) {
+  let sum = 0
+  for (let i = 0; i < num.length; i ++) {
+    sum += num[i].score
+  }
+  return sum/num.length
+}
+
 function isPassing(assessments) {
-  // your code here...
+  return(avg(assessments) >= 70) 
+    
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
