@@ -11,7 +11,18 @@ variableNameify(['MaX', 'VALUE']) => 'maxValue'
 *******************************************************************************/
 
 function variableNameify(words) {
-  // your code here...
+  let newWords = []
+  
+
+  newWords.push(words[0].toLowerCase())
+
+  for (let i = 1; i < words.length; i++) {
+    let word = words[i]
+
+    newWords.push(word.slice(0, 1).toUpperCase() + word.slice(1).toLowerCase())
+  }
+
+  return newWords.join("")
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
