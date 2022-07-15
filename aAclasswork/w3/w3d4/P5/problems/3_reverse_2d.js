@@ -17,12 +17,20 @@ var arr2 = [
   ['Julian', 'Matt', 'Mike'],
   ['Oscar', 'Patrick']
 ];
-reverse2D(arr2) => 'PatrickOscarMikeMattJulian'
+reverse2D(arr2) => 'PatrickOscarMikeMattJulian'\\
 
 *******************************************************************************/
 
 function reverse2D(array) {
-  // your code here...
+  let arr = []
+
+  for (let i = 0; i < array.length; i++){
+    for (let j = 0; j < array[i].length; j++) {
+      arr.unshift(array[i][j])
+    }
+  }
+
+  return arr.join("")
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
