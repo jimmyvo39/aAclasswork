@@ -18,23 +18,28 @@ var array2 = [12, 9, 20, 13, 14];
 minValueCallback(array2, double); // => 18
 *******************************************************************************/
 
-function minValueCallback(array, cb) {
-  let lowest = array[0]
+ function minValueCallback(array, cb) {
+//   let lowest = array[0]
 
-  if (array.length < 1) {
-    return cb(null)
-  }
+//   if (array.length < 1) {
+//     return cb(null)
+//   }
 
-  for (let i = 0; i < array.length; i ++) {
-    let current = array[i]
+//   for (let i = 0; i < array.length; i ++) {
+//     let current = array[i]
 
-    if (lowest > current) {
-      lowest = current
-    }
-  }
-  return cb(lowest)
+//     if (lowest > current) {
+//       lowest = current
+//     }
+//   }
+//   return cb(lowest)
+// }
+
+return array.length === 0 ? cb(null) : cb(array.sort((a, b) => a - b)[0])
 }
+//when we sort the time complexity is O(nlog(n))
+// O(n)
 
-
+ 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = minValueCallback;
