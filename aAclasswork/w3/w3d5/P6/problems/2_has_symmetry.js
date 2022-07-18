@@ -16,7 +16,20 @@ hasSymmetry(['cat', 'dog', 'bird', 'bird', 'cat']) => false
 *******************************************************************************/
 
 function hasSymmetry(array) {
-  // your code here...
+  let right = array.slice(0,array.length/2)
+  let reverse = []
+
+  for (let i = array.length -1; i >= 0; i--) {
+    reverse.push(array[i])
+  }
+
+  for (let i = 0; i < right.length; i++) {
+    if(array[i] !== reverse[i]) {
+      return false
+    }
+  }
+
+  return true
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
