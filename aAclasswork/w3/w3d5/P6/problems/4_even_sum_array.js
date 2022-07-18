@@ -10,8 +10,19 @@ evenSumArray([2, 8, 3, 5]) => [ 2, 20, 2, 6 ]
 *******************************************************************************/
 
 function evenSumArray(array) {
-  // your code here...
-}
+  let newArr = []
 
+  for (let i = 0; i < array.length; i++) {
+    let sum = 0
+
+    for (let j = 0; j <= array[i]; j += 2) {
+      sum += j
+    }
+
+    newArr.push(sum)
+  }
+
+  return newArr
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = evenSumArray;
