@@ -13,9 +13,13 @@ isSorted([1, 2, 4, 5, 6, 9]); // => true
 
 function isSorted(array) { 
     for (let i = 0; i < array.length; i++) {
-        
+        if (array[i] > array[i + 1]) {
+            return false
+        }
+
     }
 
+    return true
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
