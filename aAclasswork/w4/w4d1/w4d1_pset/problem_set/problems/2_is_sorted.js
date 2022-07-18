@@ -11,7 +11,10 @@ isSorted([9, 4, 1, 5, 6, 2]); // => false
 isSorted([1, 2, 4, 5, 6, 9]); // => true
 ***********************************************************************/
 
-function isSorted(array) {
+function isSorted(array) { 
+    for (let i = 0; i < array.length; i++) {
+        
+    }
 
 }
 
