@@ -19,10 +19,43 @@ stopWatch(86400); // => '24:00:00'
 stopWatch(86522); // => '24:02:02'
 stopWatch(99999); // => '27:46:39'
 ***********************************************************************/
+function hour(totalSeconds) {
+    return Math.trunc(totalSeconds/3600)
+  }
+  function minute(totalSeconds) {
+    return Math.trunc((totalSeconds - (Math.trunc(totalSeconds/3600)*3600))/60)
+  }
+  
+  function second(totalSeconds) {
+    return totalSeconds % 60
+  }
+  
+  function stopWatch(totalSeconds) {
+    let hh = 00
+    let mm = 00
+    let ss = 00
+  
+    if (hour(totalSeconds) < 10) {
+      hh = "0" + hour(totalSeconds)
+    } else {
+      hh = hour(totalSeconds)
+    }
+  
+    if (minute(totalSeconds) < 10) {
+      mm = "0" + minute(totalSeconds)
+    } else {
+      mm = minute(totalSeconds)
+    }
+  
+    if (second(totalSeconds) < 10) {
+      ss = "0" + second(totalSeconds)
+    } else {
+      ss = second(totalSeconds)
+    }
+    
+  return `${hh}:${mm}:${ss}`
+  }
 
-function stopWatch(totalSeconds) {
-
-}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = stopWatch;
