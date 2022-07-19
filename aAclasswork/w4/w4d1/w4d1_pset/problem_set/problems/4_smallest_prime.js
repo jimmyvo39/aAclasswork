@@ -28,7 +28,7 @@ function isPrime(num) {
         return false
     }
 
-    for (let i = 0; i < num; i ++) {
+    for (let i = 2; i < num; i ++) {
         if(num % i === 0) {
             return false
         }
@@ -38,12 +38,12 @@ function isPrime(num) {
 
 }
 
-function lowest(num) {
-    let low =num[0]
+function lowest(arr) {
+    let low = arr[0]
 
-    for (let i = 1; i < num; i++) {
-        if (num[i] < lowest) {
-            lowest = num [i]
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < low) {
+            low = arr[i]
         }
     }
 
@@ -60,12 +60,14 @@ function smallestPrime(array) {
     for ( let i = 0; i < array.length; i++) {
         if (isPrime(array[i])) {
             primeArr.push(array[i])
-        } else {
-            return null
-        }
+        } 
     }
 
-    return lowest(primeArr)
+    if (lowest(primeArr) === undefined) {
+        return null
+      } else {
+        return lowest(primeArr)
+      }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
