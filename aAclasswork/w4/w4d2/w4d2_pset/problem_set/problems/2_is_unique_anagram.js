@@ -14,7 +14,7 @@ isUniqueAnagram('abcd', 'abcdx'); // => false
 ***********************************************************************/
 
 function isUniqueAnagram(word1, word2) {
-
+    
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
