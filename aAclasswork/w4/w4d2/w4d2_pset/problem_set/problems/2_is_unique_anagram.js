@@ -14,7 +14,32 @@ isUniqueAnagram('abcd', 'abcdx'); // => false
 ***********************************************************************/
 
 function isUniqueAnagram(word1, word2) {
-    
+    if (word1.length !== word2.length) {
+        return false 
+    }
+
+    let chars = {}
+
+    for (i = 0; i < word1.length; i++) {
+        let char1 = word1[i]
+        let char2 = word2[i]
+
+        if (chars[char1] === undefined) {
+            chars[char1] = 1
+        } else chars[char1]++
+
+        if (chars[char2] === undefined) {
+            chars[char2] = -1
+        } else chars[char2]--
+    }
+
+    for (let key in chars) {
+        
+        if (chars[key] !== 0) {
+            return false
+        }
+    }
+    return true
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
