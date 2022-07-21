@@ -14,6 +14,19 @@ tripletSum(arr1, 11); // => [ [ 5, 2, 4 ] ]
 ***********************************************************************/
 
 function tripletSum(array, sum) {
+    let newArr = []
+
+    for (let i = 0; i < array.length; i ++) {
+        for (let j = i + 1; j < array.length; j++) {
+            for (let k = j + 1; k < array.length; k++ ) {
+                if (array[i] + array[j] + array [k] === sum) {
+                    {newArr.push([array[i], array[j], array [k]])}
+                }
+            }
+        }
+    }
+
+    return newArr
 
 }
 
