@@ -12,7 +12,20 @@ bestWinStreak('LLL') => 0
 *******************************************************************************/
 
 function bestWinStreak(str) {
-  // your code here...
+  let streak = 0
+  let bestStreak = 0
+
+  for (let i = 0; i < str.length; i++)
+  if (str[i] === "W") {
+    streak++
+    if (streak > bestStreak) {
+      bestStreak = streak
+    }
+  } else {
+    streak =0
+  }
+
+  return bestStreak
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
