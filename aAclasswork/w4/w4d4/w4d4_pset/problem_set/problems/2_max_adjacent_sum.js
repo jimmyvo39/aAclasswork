@@ -14,7 +14,15 @@ maxAdjacentSum(arr2); // => 18
 ***********************************************************************/
 
 function maxAdjacentSum(array) {
+    let maxSum = array[0] + array[1]
 
+    for (let i = 1; i < array.length -1; i++) {
+        if (array[i] + array[i + 1] > maxSum) {
+            maxSum = array[i] + array[i + 1]
+        }
+    }
+
+    return maxSum
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
