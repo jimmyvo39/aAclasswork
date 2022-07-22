@@ -11,8 +11,48 @@ nextPrimeArray([9, 13, 5, 6]) => [ 9, 17, 7, 6 ]
 nextPrimeArray([]) => []
 *******************************************************************************/
 
+function isPrime(num) {
+  if (num < 2) {
+    return false
+  }
+  
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false
+    }
+  }
+  
+  return true
+}
+
+// function nextPrime(num) {
+//   for (i = num + 1; !isPrime(i); i++){
+//   }
+//   return i
+// }
+
+function nextPrime(num) {
+
+
+while (!isPrime(i)) {
+  i++
+}
+
+return i
+}
+
 function nextPrimeArray(array) {
-  // your code here...
+  let newArr = []
+
+  for (let i = 0; i < array.length; i++) {
+    if(isPrime(array[i])) {
+      newArr.push(nextPrime(array[i]))
+    } else {
+      newArr.push(array[i])
+    }
+  }
+
+  return newArr
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
