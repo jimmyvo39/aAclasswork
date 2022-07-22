@@ -15,8 +15,22 @@ longestBigram("his last assessment is fun"); // => 'last assessment'
 ***********************************************************************/
 
 function longestBigram(sentence) {
-
-}
+    let words = sentence.split(" ")
+    let bigramArray = []
+    
+    for (let i = 0; i < words.length - 1; i++) {
+      bigramArray.push(words[i] + " " + words[i+1])
+    }
+  
+    let longestIndex = 0
+  
+    for (let i = 0; i < bigramArray.length - 1; i++) {
+      if(bigramArray[i].length > bigramArray[longestIndex].length) {
+        longestIndex = i
+      }
+    }
+    return bigramArray[longestIndex]
+  }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = longestBigram;
