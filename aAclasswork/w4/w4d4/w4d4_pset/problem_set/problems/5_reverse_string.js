@@ -11,6 +11,11 @@ reverseString(''); // => ''
 ***********************************************************************/
 
 function reverseString(string) {
+    if () {
+        return newArrr
+    }
+    let newArr =
+    newArr.unshift()
 
 }
 
