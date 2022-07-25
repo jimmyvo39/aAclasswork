@@ -11,12 +11,14 @@ reverseString(''); // => ''
 ***********************************************************************/
 
 function reverseString(string) {
-    if () {
-        return newArrr
+    if (string === "") {
+        return ""
     }
-    let newArr =
-    newArr.unshift()
 
+    let first = string[0]
+    let rest = string.slice(1)
+    let reverse = reverseString(rest) + first
+    return reverse
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
