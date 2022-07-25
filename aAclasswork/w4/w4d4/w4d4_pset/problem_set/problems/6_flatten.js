@@ -34,6 +34,25 @@ in your brain. (programmer.mind === 'blown')
 ***********************************************************************/
 
 function flatten(data) {
+    if (!Array.isArray(data)) { // if the data element is not an array return the element
+        return [data];
+    }
+
+    let flattened = []
+
+    for (let i = 0; i < data.length; i++) {
+        let ele = data[i]
+        let flattener = flatten(ele)
+        flattened = flattened.concat(flattener)
+    }
+
+    return flattened
+
+
+
+    
+
+
 
 }
 
