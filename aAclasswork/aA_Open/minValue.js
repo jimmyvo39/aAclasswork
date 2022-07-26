@@ -1,12 +1,27 @@
-function minValue(nums) {
-    if (nums.length === 0) {
-        return null
-    }
+// function minValue(nums) {
+//     if (nums.length === 0) {
+//         return null
+//     }
     
-    let min = nums[0]
+//     let min = nums[0]
+    
+//     for (let i = 1; i < nums.length; i++){
+//         if(min > nums[i]) {
+//             min = nums[i]
+//         }
+        
+//     }
+    
+//     return min
+// }
+
+function minValue(nums) {
+    let min = null
     
     for (let i = 1; i < nums.length; i++){
-        if(min > nums[i]) {
+        let num = nums[i]
+        
+        if(min === null|| min > num) {
             min = nums[i]
         }
         
